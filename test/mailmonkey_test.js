@@ -20,21 +20,7 @@ describe('mailmonkey', function () {
     }).should.throw('You have to override the validate method to implement your own validation logic.');
   });
 
-  it('should thrown an error', function () {
-    (function () {
-
-      var CustomMonkey = function () {
-      }
-      util.inherits(CustomMonkey, mailMonkey.Base);
-      CustomMonkey.prototype.validate = function () {
-      };
-
-      var monkey = new CustomMonkey();
-      mailMonkey().register(monkey);
-    }).should.throw('The validate method must return an boolean value.');
-  });
-
-  it('should work without any errors', function () {
+  it('register a CustomMonkey', function () {
     (function () {
 
       var CustomMonkey = function () {

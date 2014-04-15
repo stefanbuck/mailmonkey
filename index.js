@@ -7,3 +7,4 @@ var mailmonkey = module.exports = function (name) {
 };
 
 mailmonkey.Base = require('./lib/base');
+mailmonkey.SubjectMonkey = require('./lib/subjectmonkey');
